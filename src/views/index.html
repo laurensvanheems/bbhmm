@@ -4,10 +4,50 @@
 
   <link href="/assets/stylesheets/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body ng-app="bbhmmApp">
 
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="/assets/javascripts/vendor/lodash.min.js"></script>
-  <script src="/assets/javascripts/script.js"></script>
+  <h1>Bitch Better Have My Money!</h1>
+  <h2>Don't act like you forgot</h2>
+
+  <section bbhmm-form>
+    <form>
+      <ul>
+        <li>
+          <label for="bitch">Bitch</label>
+          <input
+            type="text"
+            placeholder="Drake (venmo username)"
+            ng-model="bitch"
+            ng-keyup="constructVenmo(bitch, 'recipients')" />
+        </li>
+
+        <li>
+          <label for="bitch">Money</label>
+          <input
+            type="text"
+            placeholder="Drake"
+            ng-model="money"
+            ng-keyup="constructVenmo(money, 'amount')" />
+        </li>
+
+        <li>
+          <label for="bitch">Note</label>
+          <input
+            type="text"
+            placeholder="Drake"
+            ng-model="note"
+            ng-keyup="constructVenmo(note, 'note')" />
+        </li>
+
+      </ul>
+    </form>
+
+    <span>{{venmoUrl}}</span>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="/assets/javascripts/vendor/angular-animate.min.js"></script>
+  <script src="/assets/javascripts/app.js"></script>
 </body>
 </html>
