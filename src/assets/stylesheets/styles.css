@@ -1,5 +1,109 @@
 * {
   box-sizing: border-box; }
 
-body {
-  background: #267ec1; }
+body, html {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background: #fafafa;
+  font-family: 'Raleway', cursive; }
+
+figure {
+  padding: 0;
+  margin: 0; }
+
+h1 {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  font-weight: 100;
+  font-size: 56px;
+  max-width: 500px;
+  z-index: 2; }
+
+.bbhmm__header {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 400px;
+  padding: 100px 0;
+  background: #490f03;
+  background: -webkit-linear-gradient(top, #490f03 0%, #1c1c1c 100%);
+  background: linear-gradient(to bottom, #490f03 0%, #1c1c1c 100%);
+  overflow: hidden; }
+
+.riri {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  bottom: -10%;
+  left: 5%;
+  background: url(../images/riri.png) no-repeat center center;
+  background-size: 100%;
+  z-index: 1; }
+
+.bitch {
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  top: -40px;
+  right: 20%;
+  background: url(../images/bitch.png) no-repeat center center;
+  background-size: auto 100%;
+  z-index: 1;
+  -webkit-animation: swing 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+          animation: swing 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+  -webkit-transform-origin: 50% -20px;
+      -ms-transform-origin: 50% -20px;
+          transform-origin: 50% -20px; }
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
+
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg); } }
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
+
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg); } }
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 60px 0;
+  width: 96%;
+  max-width: 800px;
+  color: #0a0a0a;
+  text-align: center;
+  z-index: 2; }
+
+.bbhmm__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 350px; }
+
+.bbhmm__list__item, .bbhmm__list__item input, .bbhmm__list__item label {
+  display: inline-block;
+  width: 100%; }
+
+.bbhmm__list__item input {
+  height: 60px;
+  padding: 0 10px;
+  margin: 10px 0 30px;
+  color: #000;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #0a0a0a;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Raleway', cursive; }

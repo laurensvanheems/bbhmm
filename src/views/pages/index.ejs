@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body ng-app="bbhmmApp">
+
+  <header class="bbhmm__header" bbhmm-header>
+    <figure class="riri"></figure>
+    <figure class="bitch"></figure>
+    <h1>Let that Bitch know to better have your money</h1>
+  </header>
+
+  <section class="container">
+
+
+
+    <section bbhmm-form>
+      <form>
+        <ul class="bbhmm__list">
+          <li class="bbhmm__list__item">
+            <label for="bitch">Your Name</label>
+            <input
+              type="text"
+              placeholder="Rihanna"
+              ng-model="name" />
+          </li>
+          <li class="bbhmm__list__item">
+            <label for="bitch">The Bitch</label>
+            <input
+              type="text"
+              placeholder="Drake (venmo username)"
+              ng-model="bitch"
+              ng-keyup="constructVenmo(bitch, 'recipients')" />
+          </li>
+
+          <li class="bbhmm__list__item">
+            <label for="bitch">The Money</label>
+            <input
+              type="number"
+              placeholder="100"
+              ng-model="money"
+              ng-keyup="constructVenmo(money, 'amount')" />
+          </li>
+
+          <li class="bbhmm__list__item">
+            <label for="bitch">The Message</label>
+            <input
+              type="text"
+              placeholder="Don’t act like you forgot"
+              ng-model="note"
+              ng-keyup="constructVenmo(note, 'note')" />
+          </li>
+
+        </ul>
+      </form>
+
+      <span>{{venmoUrl}}</span>
+    </section>
+  </section>
+
+  <% include ../partials/scripts %>
+
+</body>
+</html>

@@ -1,12 +1,11 @@
 <!doctype html>
 <html>
 <head>
-
-  <link href="/assets/stylesheets/styles.css" rel="stylesheet" type="text/css">
+  <% include ../partials/head %>
 </head>
 <body ng-app="bbhmmApp">
 
-  <h1>Bitch Better Have My Money!</h1>
+  
   <h2>Don't act like you forgot</h2>
 
   <section bbhmm-form>
@@ -45,9 +44,7 @@
     <span>{{venmoUrl}}</span>
   </section>
 
+  <% include ../partials/scripts %>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-  <script src="/assets/javascripts/vendor/angular-animate.min.js"></script>
-  <script src="/assets/javascripts/app.js"></script>
 </body>
 </html>
