@@ -5,15 +5,20 @@
 </head>
 <body ng-app="bbhmmApp">
 
+  <section class="bbhmm__background">
+    <figure class="bbhmm__riri"></figure>
+    <figure class="bbhmm__bitch"></figure>
+  </section>
+
   <header class="bbhmm__header" bbhmm-header>
-    <figure class="riri"></figure>
-    <figure class="bitch"></figure>
-    <h1>Let that Bitch know to better have your money</h1>
+    <hgroup class="bbhmm__header__titles">
+      <h1>Bitch better have my money</h1>
+      <h2>Let that bitch know</h2>
+    </hgroup>
+    <figure class="bbhmm__scroll"></figure>
   </header>
 
-  <section class="container">
-
-
+  <section class="bbhmm__body">
 
     <section bbhmm-form>
       <form>
@@ -29,7 +34,7 @@
             <label for="bitch">The Bitch</label>
             <input
               type="text"
-              placeholder="Drake (venmo username)"
+              placeholder="Kendall (venmo username)"
               ng-model="bitch"
               ng-keyup="constructVenmo(bitch, 'recipients')" />
           </li>
@@ -54,8 +59,14 @@
 
         </ul>
       </form>
-
-      <span>{{venmoUrl}}</span>
+      <a
+        href="{{venmoUrl}}"
+        target="_blank"
+        title="Charge that bitch on Venmo"
+        class="bbhmm__venmo"
+        ng-show="showVenmo">
+        Charge on Venmo
+      </a>
     </section>
   </section>
 

@@ -19,6 +19,12 @@ var app = angular.module('bbhmmApp', [
       params += '&' + value + '=' + key;
     });
 
+    if($scope.bitch && $scope.money) {
+      $scope.showVenmo = true;
+    } else {
+      $scope.showVenmo = false;
+    }
+
     $scope.venmoUrl = venmoUrl + params;
   };
 
@@ -37,7 +43,7 @@ var app = angular.module('bbhmmApp', [
     restrict: 'AE',
     scope: true,
     link: function(scope, elem, attr){
-      
+
     }
   };
 }]);
