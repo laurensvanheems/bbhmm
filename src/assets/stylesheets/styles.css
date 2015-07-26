@@ -186,8 +186,8 @@ h2 {
   display: inline-block;
   width: 100%;
   z-index: 2;
-  -webkit-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.5s;
-          transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.5s; }
+  -webkit-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+          transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s; }
 
 .bbhmm__venmo:before {
   content: '';
@@ -201,8 +201,8 @@ h2 {
   border-radius: 100%;
   -webkit-transform: translate3d(-50%, -50%, 0) scale(0);
           transform: translate3d(-50%, -50%, 0) scale(0);
-  -webkit-transition: all 0.5s cubic-bezier(0.86, 0.16, 0.655, 0.53);
-          transition: all 0.5s cubic-bezier(0.86, 0.16, 0.655, 0.53); }
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0.16, 0.655, 0.53), background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition: transform 0.5s cubic-bezier(0.86, 0.16, 0.655, 0.53), background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
 .bbhmm__venmo--enabled {
   pointer-events: all;
@@ -218,7 +218,9 @@ h2 {
 .bbhmm__venmo--enabled:hover span {
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
-          transform: translateY(-100%); }
+          transform: translateY(-100%);
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s; }
 
 @media screen and (max-width: 560px) {
   h1, h2 {
