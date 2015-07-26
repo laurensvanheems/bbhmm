@@ -1,5 +1,7 @@
+smoothScroll.init();
+
 var app = angular.module('bbhmmApp', [
-  'ngAnimate'
+  //'ngAnimate'
 ])
 
 .controller('bbhmmFormCtrl', ['$scope', function($scope) {
