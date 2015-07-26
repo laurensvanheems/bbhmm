@@ -23,13 +23,13 @@
     <section bbhmm-form>
       <form>
         <ul class="bbhmm__list">
-          <li class="bbhmm__list__item">
+          <!-- <li class="bbhmm__list__item">
             <label for="bitch">Your Name</label>
             <input
               type="text"
               placeholder="Rihanna"
               ng-model="name" />
-          </li>
+          </li> -->
           <li class="bbhmm__list__item">
             <label for="bitch">The Bitch</label>
             <input
@@ -64,8 +64,9 @@
         target="_blank"
         title="Charge that bitch on Venmo"
         class="bbhmm__venmo"
-        ng-class="{'bbhmm__venmo--disabled': !showVenmo}">
-        Charge on Venmo
+        ng-class="{'bbhmm__venmo--enabled': showVenmo}">
+        <span>Charge on Venmo</span>
+        <span>DO IT!</span>
       </a>
     </section>
   </section>

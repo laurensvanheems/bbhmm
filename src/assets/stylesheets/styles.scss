@@ -10,7 +10,7 @@ html {
   padding: 0;
   margin: 0;
   color: #fff;
-  background: #395561;
+  background: #f9f9e0;
   font-family: 'Raleway', cursive;
 }
 
@@ -27,7 +27,7 @@ figure {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #97d2ea;
+  background: #c9ebc3;
   //background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.8) 100%);
   overflow: hidden;
 }
@@ -125,7 +125,7 @@ h2 {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  max-width: 590px;
+  max-width: 460px;
 }
 
 .bbhmm__list__item,
@@ -162,21 +162,61 @@ h2 {
 }
 
 .bbhmm__venmo {
+  position: relative;
   display: inline-block;
   width: 200px;
-  padding: 18px;
+  height: 55px;
+  line-height: 55px;
   margin-top: 15px;
-  background: #0094d1;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
-}
-
-.bbhmm__venmo--disabled {
+  border-radius: 6px;
   background: #666;
   cursor: default;
   pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
 }
+
+.bbhmm__venmo span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  z-index: 2;
+  transition: all 0s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1.5s;
+}
+
+.bbhmm__venmo:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: #0094d1;
+  border-radius: 100%;
+  transform: translate3d(-50%,-50%,0) scale(0);
+  transition: all 0.5s cubic-bezier(0.860, 0.160, 0.655, 0.530);
+}
+
+.bbhmm__venmo--enabled {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.bbhmm__venmo--enabled:before {
+  transform: translate3d(-50%,-50%,0) scale(1);
+}
+
+.bbhmm__venmo--enabled:hover:before {
+  background: lighten(#0094d1, 4%);
+}
+
+.bbhmm__venmo--enabled:hover span {
+  transform: translateY(-100%);
+}
+
 
 @media screen and (max-width: 560px) {
     h1, h2 {
