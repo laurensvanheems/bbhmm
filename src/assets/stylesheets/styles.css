@@ -37,7 +37,7 @@ figure {
 
 .bbhmm__riri {
   position: absolute;
-  width: 400px;
+  width: 350px;
   height: 500px;
   bottom: -10%;
   left: 5%;
@@ -56,27 +56,27 @@ figure {
   z-index: 1;
   -webkit-animation: swing 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
           animation: swing 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
-  -webkit-transform-origin: 50% -20px;
-      -ms-transform-origin: 50% -20px;
-          transform-origin: 50% -20px; }
+  -webkit-transform-origin: 87% 20px;
+      -ms-transform-origin: 87% 20px;
+          transform-origin: 87% 20px; }
 
 @-webkit-keyframes swing {
   0% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg); }
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); }
 
   100% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg); } }
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); } }
 
 @keyframes swing {
   0% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg); }
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); }
 
   100% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg); } }
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); } }
 
 h1, h2 {
   position: relative;
@@ -117,7 +117,7 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #333;
+  background: #4c5452;
   overflow: hidden; }
 
 .bbhmm__share {
