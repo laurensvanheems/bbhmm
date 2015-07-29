@@ -10,13 +10,13 @@ body, html {
   font-family: 'Raleway', cursive; }
 
 ::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(255, 255, 255, 0.6); }
 
 ::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(255, 255, 255, 0.6); }
 
 :-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(255, 255, 255, 0.6); }
 
 figure {
   padding: 0;
@@ -185,7 +185,7 @@ p {
   height: 55px;
   line-height: 55px;
   margin-top: 15px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   border-radius: 6px;
   background: #00a680;
