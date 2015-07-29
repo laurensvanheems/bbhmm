@@ -110,6 +110,7 @@ p {
   position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 10;
 }
 
 .twitter-share-button {
@@ -240,8 +241,8 @@ p {
 
 @media screen and (max-width: 560px) {
     h1, h2 {
-      font-size: 70px;
-      line-height: 72px;
+      font-size: 50px;
+      line-height: 48px;
     }
 
     h2 {
@@ -251,9 +252,29 @@ p {
 
     .bbhmm__header {
       height: 80vh;
+      display: block;
+    }
+
+    .bbhmm__header__titles {
+      margin-top: 60px;
     }
 
     .bbhmm__scroll {
       bottom: 0;
+    }
+
+    .bbhmm__riri {
+      width: 200px;
+      height: 260px;
+      bottom: -10%;
+      left: -5%;
+    }
+
+    .bbhmm__bitch {
+      width: 200px;
+      height: 330px;
+      top: -40px;
+      right: -10%;
+      transform-origin: 77% 14px;
     }
 }
