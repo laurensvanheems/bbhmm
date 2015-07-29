@@ -125,6 +125,10 @@ p {
   top: 20px;
   left: 20px; }
 
+.twitter-share-button {
+  vertical-align: top;
+  margin-left: 15px; }
+
 .bbhmm__header__titles {
   position: relative;
   z-index: 3; }
