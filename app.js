@@ -17,4 +17,4 @@ app.get('/:id', function(req, res) {
     res.render('pages/details');
 });
 
-app.listen(8080);
+app.listen(3000);
