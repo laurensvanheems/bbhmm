@@ -33,7 +33,8 @@ figure {
   border-right: 2px solid #fff;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
+          transform: rotate(45deg);
+  z-index: 10; }
 
 .bbhmm__riri {
   position: absolute;
@@ -247,18 +248,23 @@ p {
   h2 {
     font-size: 30px;
     font-weight: 200; }
+  p {
+    margin: 0 auto 50px;
+    width: 90%; }
+  p br {
+    display: none; }
   .bbhmm__header {
-    height: 80vh;
+    height: 90vh;
     display: block; }
   .bbhmm__header__titles {
     margin-top: 60px; }
   .bbhmm__scroll {
-    bottom: 0; }
+    bottom: 60px; }
   .bbhmm__riri {
     width: 200px;
     height: 260px;
     bottom: -10%;
-    left: -5%; }
+    left: -15%; }
   .bbhmm__bitch {
     width: 200px;
     height: 330px;
@@ -267,3 +273,7 @@ p {
     -webkit-transform-origin: 77% 14px;
         -ms-transform-origin: 77% 14px;
             transform-origin: 77% 14px; } }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  p, .bbhmm__list__item input {
+    font-weight: 300; } }
