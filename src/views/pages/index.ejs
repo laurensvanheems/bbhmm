@@ -4,18 +4,24 @@
   <% include ../partials/head %>
 </head>
 <body ng-app="bbhmmApp">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1757297634497578";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-  <div
-    class="fb-like"
-    data-share="true"
-    data-width="450"
-    data-show-faces="false">
-  </div>
 
   <header class="bbhmm__header" bbhmm-header>
 
     <figure class="bbhmm__riri"></figure>
     <figure class="bbhmm__bitch"></figure>
+
+    <aside class="bbhmm__share">
+      <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    </aside>
 
     <hgroup class="bbhmm__header__titles">
       <h1>Bitch better have my money</h1>
