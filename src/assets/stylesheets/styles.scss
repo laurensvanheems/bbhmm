@@ -1,5 +1,5 @@
 /* Variables */
-$clr__input-placeholder: rgba(255,255,255,.6);
+$clr__input-placeholder: rgba(0,0,0,.4);
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ html {
   margin: 0;
   color: #000;
   background: #fff;
-  font-family: 'Raleway', cursive;
+  font-family: 'Crimson Text', serif;
 }
 
 ::-webkit-input-placeholder { color: $clr__input-placeholder; }
@@ -23,23 +23,29 @@ figure {
   margin: 0;
 }
 
-.bbhmm__scroll {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  margin-left: -18px;
-  width: 36px;
-  height: 36px;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-  transform: rotate(45deg);
-  z-index: 10;
+.bbhmm__header {
+  position: relative;
+  width: 100%;
+  padding: 55px 0 1px;
+  background: #f3183b;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bbhmm__money {
+  position: relative;
+  max-width: 450px;
+  width: 90%;
+  height: 207px;
+  margin: -40px auto 50px;
+  background: url(../images/mymoney.png) no-repeat center center;
+  background-size: 100%;
 }
 
 .bbhmm__riri {
   position: absolute;
-  width: 350px;
-  height: 500px;
+  width: 330px;
+  height: 450px;
   bottom: -10%;
   left: 5%;
   background: url(../images/riri.png) no-repeat center center;
@@ -52,7 +58,7 @@ figure {
   width: 200px;
   height: 500px;
   top: -40px;
-  right: 20%;
+  right: 14%;
   background: url(../images/bitch.png) no-repeat center center;
   background-size: auto 100%;
   z-index: 1;
@@ -69,8 +75,21 @@ figure {
   }
 }
 
-h1,
-h2 {
+.bbhmm__copy {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 34px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.bbhmm__subtitle {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+h1 {
   position: relative;
   display: block;
   margin: 0 auto;
@@ -80,19 +99,6 @@ h2 {
   width: 90%;
   z-index: 2;
   line-height: 90px;
-}
-
-h2 {
-  margin-top: -6px;
-  font-size: 40px;
-  font-weight: 100;
-}
-
-.bbhmm__copy {
-  font-size: 22px;
-  font-weight: 100;
-  line-height: 34px;
-  margin-bottom: 60px;
 }
 
 .bbhmm__share {
@@ -110,18 +116,25 @@ h2 {
 .bbhmm__body {
   position: relative;
   margin: 0 auto;
-  padding: 50px 0 70px;
+  padding: 30px 0 70px;
   width: 92%;
   max-width: 570px;
   text-align: center;
   z-index: 2;
 }
 
+.bbhmm__body__title {
+  margin-bottom: 70px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+
 .bbhmm__list {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  max-width: 460px;
+  max-width: 400px;
 }
 
 .bbhmm__list__item,
@@ -133,46 +146,47 @@ h2 {
 
 .bbhmm__list__item label {
   text-align: left;
-
   padding-left: 10px;
   color: #2c2c2c;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .bbhmm__list__item input {
-  height: 56px;
+  height: 70px;
   padding: 1px 16px 0;
-  margin: 10px 0 30px;
-  color: #fff;
-  border: 1px solid transparent;
-  //border-bottom: 1px solid rgba(0,0,0,.5);
-  border-radius: 6px;
-  background: rgba(0,0,0,.2);
-  font-size: 24px;
+  margin: 10px 0 40px;
+  color: #000;
+  border: 2px solid #000;
+  background: transparent;
+  font-size: 22px;
   font-weight: 100;
-  font-family: 'Raleway', cursive;
+  font-family: helvetica;
   outline: 0;
   transition: all 0.2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .bbhmm__list__item input:focus {
-  background: rgba(0,0,0,.15);
-  border-color: rgba(0,0,0,.2);
+
 }
 
 .bbhmm__venmo {
   position: relative;
   display: inline-block;
-  width: 200px;
-  height: 55px;
-  line-height: 55px;
+  height: 70px;
+  padding: 0 10px;
+  line-height: 72px;
   margin-top: 15px;
-  color: $clr__input-placeholder;
+  color: rgba(255,255,255,.4);
   text-decoration: none;
-  border-radius: 6px;
-  background: #00a680;
+  background: #000;
   cursor: default;
   pointer-events: none;
   overflow: hidden;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: helvetica, arial, sans-serif;
   transform: translate3d(0,0,0);
   outline: 0;
 }
@@ -191,9 +205,9 @@ h2 {
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
-  background: #0094d1;
+  width: 350px;
+  height: 350px;
+  background: #f3183b;
   border-radius: 100%;
   transform: translate3d(-50%,-50%,0) scale(0);
   transition: transform 0.5s cubic-bezier(0.860, 0.160, 0.655, 0.530), background 0.12s cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -202,7 +216,7 @@ h2 {
 .bbhmm__venmo--enabled {
   pointer-events: all;
   cursor: pointer;
-  color: rgba(255,255,255,1);
+  color: #fff;
 }
 
 .bbhmm__venmo--enabled:before {
@@ -210,7 +224,7 @@ h2 {
 }
 
 .bbhmm__venmo--enabled:hover:before {
-  background: lighten(#0094d1, 4%);
+  background: darken(#f3183b, 14%);
 }
 
 .bbhmm__venmo--enabled:hover span {
@@ -243,8 +257,7 @@ h2 {
     }
 
     .bbhmm__header {
-      height: 90vh;
-      display: block;
+      padding-bottom: 120px;
     }
 
     .bbhmm__header__titles {
@@ -253,6 +266,10 @@ h2 {
 
     .bbhmm__scroll {
       bottom: 60px;
+    }
+
+    .bbhmm__money {
+      margin-bottom: 20px;
     }
 
     .bbhmm__riri {

@@ -1,5 +1,3 @@
-smoothScroll.init();
-
 var app = angular.module('bbhmmApp', [
   //'ngAnimate'
 ])
