@@ -2,7 +2,7 @@ var app = angular.module('bbhmmApp', [
   //'ngAnimate'
 ])
 
-.controller('bbhmmFormCtrl', ['$scope', function($scope) {
+.controller('bbhmmFormCtrl', ['$scope', '$document', function($scope, $document) {
   $scope.venmoParams = {};
 
   $scope.constructVenmo = function(value, type) {
@@ -28,6 +28,12 @@ var app = angular.module('bbhmmApp', [
     $scope.venmoUrl = venmoUrl + params;
   };
 
+  $document[0].addEventListener('keyup', function(event){
+    if($scope.showVenmo && event.keyCode == 13){
+      $document[0].querySelector('.bbhmm__venmo').click();
+    }
+  });
+
 }])
 
 .directive('bbhmmForm', [function() {
@@ -35,15 +41,5 @@ var app = angular.module('bbhmmApp', [
     restrict: 'AE',
     scope: true,
     controller: 'bbhmmFormCtrl'
-  };
-}])
-
-.directive('bbhmmHeader', ['$window', function($window) {
-  return {
-    restrict: 'AE',
-    scope: true,
-    link: function(scope, elem, attr){
-
-    }
   };
 }]);
