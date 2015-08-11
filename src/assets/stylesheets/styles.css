@@ -33,7 +33,8 @@ figure {
   font-weight: 600;
   text-transform: uppercase;
   font-family: helvetica, arial, sans-serif;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 200; }
 
 .bbhmm__mute:hover {
   opacity: 0.5; }
