@@ -273,7 +273,9 @@ h1 {
     right: -10%;
     -webkit-transform-origin: 77% 14px;
         -ms-transform-origin: 77% 14px;
-            transform-origin: 77% 14px; } }
+            transform-origin: 77% 14px; }
+  .bbhmm__mute {
+    display: none; } }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   p, .bbhmm__list__item input {
