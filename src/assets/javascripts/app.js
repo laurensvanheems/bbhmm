@@ -36,10 +36,25 @@ var app = angular.module('bbhmmApp', [
 
 }])
 
-.directive('bbhmmForm', [function() {
+.directive('bbhmmForm', ['$document', function($document) {
   return {
     restrict: 'AE',
     scope: true,
     controller: 'bbhmmFormCtrl'
+  };
+}])
+
+.directive('bbhmmAudio', ['$document', function($document) {
+  return {
+    restrict: 'AE',
+    scope: true,
+    link: function(scope, elem, attr) {
+      var soundcloud = SC.Widget($document[0].querySelector('.soundcloud'));
+      scope.audioToggle = 'off';
+      scope.toggleAudio = function() {
+        soundcloud.toggle();
+        scope.audioToggle = (scope.audioToggle == 'off') ? 'on' : 'off';
+      };
+    }
   };
 }]);

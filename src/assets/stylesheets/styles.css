@@ -22,6 +22,22 @@ figure {
   padding: 0;
   margin: 0; }
 
+.soundcloud {
+  display: none; }
+
+.bbhmm__mute {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: helvetica, arial, sans-serif;
+  cursor: pointer; }
+
+.bbhmm__mute:hover {
+  opacity: 0.5; }
+
 .bbhmm__header {
   position: relative;
   width: 100%;
